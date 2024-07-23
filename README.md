@@ -38,7 +38,7 @@ En este módulo se trabaja con
 - Introducción a los conceptos básicos de la Programación
 - Programación utilizando el Lenguaje Javascript
 - Introducción a la Programación Funcional
-- Introducción a la Programación Orienta a Objetos
+- Introducción a la Programación Orientada a Objetos
 
 ### Desarrollo de SPA utilizando React
 
