@@ -1,0 +1,52 @@
+.estilo-mobile {
+    color: red;
+    width: 100%;
+    padding: 16px;
+}
+
+/*
+    Necesito modificar a partir de Tablets
+*/
+@media (min-width: 768px) {
+    .estilo-mobile {
+        padding: 8px;
+    }
+}
+
+.images {
+    width: clamp(200px, 100%, 600px);
+}
+
+.otro-estilo {
+    color: blue;
+}
+
+/*
+    Necesito modificar a partir de Desktop
+*/
+
+@media (min-width: 992px) {
+    .images {
+        width: 400px;
+    }
+}
+
+/*
+    Primero todos los estilos mobile
+*/
+
+
+/*
+    Todos los estilos de Tablets
+*/
+@media (min-width: 768px) {}
+
+
+/*
+    Todos los estilos de Desktop
+*/
+@media (min-width: 992px) {}
+
+.rojo {
+    color: red;
+}
