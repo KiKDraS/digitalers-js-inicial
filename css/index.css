@@ -1,0 +1,32 @@
+.resultado {
+    padding: 16px;
+    text-align: center;
+    background-color: #aec5ad;
+}
+
+.resaltar {
+    font-size: large;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    background-color: #a02c2c;
+    border: 1px solid #000000;
+    margin: 10px;
+    display: inline-block;
+}
+
+.cuadrado-rojo {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+.cuadrado-azul {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
