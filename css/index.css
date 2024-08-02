@@ -1,0 +1,22 @@
+.cartel {
+    width: 90%;
+    height: 20vh;
+    border-radius: 16px;
+    box-shadow: 5px 5px 5px gray;
+    background-color: bisque;
+    color: darkslateblue;
+    margin: auto;
+    text-align: center;
+    line-height: 20vh;
+    font-size: 42px;
+    font-weight: bold;
+    border: 1px solid bisque;
+}
+
+.ingreso {
+    color: green;
+}
+
+.no-ingreso {
+    color: red;
+}
