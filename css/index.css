@@ -1,0 +1,28 @@
+.cartel {
+    width: 95%;
+    height: 100px;
+    margin: 16px auto;
+    padding: 16px;
+    line-height: 100px;
+    background-color: antiquewhite;
+    border-radius: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
