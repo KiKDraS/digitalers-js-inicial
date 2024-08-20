@@ -52,6 +52,5 @@ En este módulo se trabaja con
 
 ## Sobre el repositorio
 
-Este repositorio corresponde a la parte teórica del módulo <b>Introducción al
-Desarrollo Web</b> y el contenido arranca desde el punto en que se empieza a
-trabajar con Git/GitHub
+Este repositorio corresponde a la parte teórica del módulo <b>Introducción a la
+Programación</b>
