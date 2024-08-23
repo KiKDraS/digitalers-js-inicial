@@ -1,0 +1,26 @@
+Resolución en archivo ejercicios.js
+
+//Mostrar por consola el nombre del navegador que se está utilizando
+//Imprimir los datos del array como elementos HTML
+//Realizar un efecto marquesina en un nodo <p> que diga "Mi primer programa en JS" que muestre de a una letra a la vez cada medio segundo por letra
+
+/*
+  Usando el siguiente Array:
+  const vengadores = [
+    {nombre: "Tony", apellido: "Stark", alias: "Iron-Man"},
+    {nombre: "Steve", apellido: "Rogers", alias: "Capitan America"},
+    {nombre: "Bruce", apellido: "Banner", alias: "Hulk"},
+    {nombre: "Natasha", apellido: "Romanoff", alias: "Black Widow"},
+    {nombre: "Clint", apellido: "Barton", alias: "Hawkeye"},
+  ];
+  1. Mostrar en pantalla el nombre, apellido y alias de todos los personajes
+  2. Mostrar en pantalla el nomnbre, apellido y alias del personaje seleccionado
+  3. La aplicación debe empezar mostrando todos los personajes y debe ser posible cambiar los elementos según se desea	
+*/
+
+/*
+  Dado el siguiente Array
+  const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  1. Mostrar los números pares
+  2. Permitir que el usuario pueda alternar entre ver números pares e impares
+*/

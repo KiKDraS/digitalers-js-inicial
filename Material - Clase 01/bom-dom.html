@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>JavaScript Avanzado</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper">
+        <span class="sidebar-heading border-bottom bg-light"
+          >Contacto:
+          <a href="mailto:anahiforesi.educacionit@gmail.com"
+            >Anahí Foresi</a
+          ></span
+        >
+        <ul class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="index.html"
+            >ECMAScript 2015</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="bom-dom.html"
+            >BOM-DOM</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="ejercicios.html"
+            >Ejercicios</a
+          >
+        </ul>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          id="barra"
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <div class="container-fluid">
+            <button class="btn btn-primary" id="sidebarToggle">Temas</button>
+            <h1>Clase 01</h1>
+          </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+          <h2 class="mt-4">BOM vs DOM</h2>
+          <h3>Web API (API Web)</h3>
+          <p>
+            Una interfaz de programación de aplicaciones (API por sus siglas en
+            inglés), es un conjunto de rutinas que provee acceso a funciones de
+            un determinado software. <br />
+            Cuando trabajamos en Programación Web nos vamos a encontrar con dos
+            tipos distintos de API's el primero son aquellas que nos van a
+            permitir interactuar con los distintos elementos del navegador;
+            mientras que el segundo son las API's que nos permiten obtener y
+            manipular datos desde una fuente externa (API REST). <br />
+            JavaScript ofrece una extensa variedad de API's para trabajar pero
+            hay dos que son comunes a todos los proyectos: <b>Window</b> y
+            <b>Document</b>
+          </p>
+          <h3>Browser Object Model (API Window)</h3>
+          <p>
+            El BOM es un objeto global (también conocido como objeto window) que
+            contiene todas las API's con las que podemos trabajar. Además, a
+            menos que especifiquemos lo contrario, se va a encargar de almacenar
+            todas la variables, funciones y elementos que vayamos creando a lo
+            largo de nuestra aplicación. <br />
+            El BOM es un objeto tan global que no necesitamos referirnos a él de
+            forma explícita cuando lo usamos. <br />
+            El objeto global está presente en todos los entornos de trabajo por
+            lo que podríamos acceder al mismo si usáramos Node.js para trabajar
+            con JS desde el servidor. En este caso, usaríamos la palabra
+            reservada 'global'. En actualizaciones recientes, se introdujo
+            'globalThis' para hacer referencia al objeto global en un proyecto
+            que trabaje con más de un contexto de ejecución.
+          </p>
+          <div class="row">
+            <div class="col mb-3">
+              <img
+                src="assets/bom.png"
+                alt=""
+                width="100%"
+                style="max-width: 750px"
+              />
+            </div>
+          </div>
+          <h3>Document Object Model (API document)</h3>
+          <p>
+            Dentro del BOM nos encontramos con el DOM. El DOM es la API
+            encargada de manejar el documento HTML.<br />
+            El DOM genera una representación lógica del documento HTML conocida
+            como DOM Tree. Esta representación se compone por un conjunto de
+            nodos (objetos), relacionados entre sí que nos permite, desde
+            JavaScript, interactuar con el documento HTML
+            <br />
+            Al momento de generar contenido dinámico (es decir, agregar nodos
+            desde JS) hay que respetar una regla fundamental del DOM
+            <i
+              >“Se deben minimizar al máximo la cantidad de cambios en el
+              DOM”</i
+            >
+          </p>
+          <h2 class="mt-4">Manejo del DOM</h2>
+          <div id="manejoDom" class="dom"></div>
+          <footer class="text-end">
+            <small>
+              Información adicional sobre
+              <a href="https://developer.mozilla.org/es/docs/Web/API/Window"
+                >BOM</a
+              >
+              y
+              <a href="https://developer.mozilla.org/es/docs/Glossary/DOM"
+                >DOM</a
+              >
+            </small>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- BOM - DOM -->
+    <script src="js/bom-dom.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>JavaScript Avanzado</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper">
+        <span class="sidebar-heading border-bottom bg-light"
+          >Contacto:
+          <a href="mailto:anahiforesi.educacionit@gmail.com"
+            >Anahí Foresi</a
+          ></span
+        >
+        <ul class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="index.html"
+            >ECMAScript 2015</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="bom-dom.html"
+            >BOM-DOM</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="ejercicios.html"
+            >Ejercicios</a
+          >
+        </ul>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          id="barra"
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <header class="container-fluid">
+            <button class="btn btn-primary" id="sidebarToggle">Temas</button>
+            <h1>Clase 01</h1>
+          </header>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+          <h2 class="mt-4">ECMAScript 2015</h2>
+          <p>
+            A lo largo de la existencia de Javascript y desde que se le encargó
+            a ECMA el trabajo de su estandarización, han aparecido diversas
+            versiones de Javascript con cada vez mayores funcionalidades,
+            estructuras de control, etc. Esas son las versiones del estándar y
+            hoy de la que nos ocupamos es de ES6, la sexta versión. <br />
+            ES5 estuvo con nosotros durante muchos años y a día de hoy es la
+            versión de Javascript más extendida en todo tipo de plataformas.
+            Cuando alguien dice que conoce o usa Javascript es común entender
+            que lo que usa es ES5, el Javascript con mayor índice de
+            compatibilidad. De ésto también se entiende que, cuando queremos
+            escribir un código compatible con todos los navegadores o sistemas,
+            lo normal es que ese código sea ES5.
+            <br />
+            Para facilitar nuestra vida y poder comenzar a usar ES6 en cualquier
+            proyecto, han surgido los transpiladores, una herramienta que ha
+            venido a nuestro kit de desarrollo para quedarse.
+            <br />
+            Los transpiladores son programas capaces de traducir el código de un
+            lenguaje para otro, o de una versión para otra. Por ejemplo, el
+            código escrito en ES6, traducirlo a ES5. Dicho de otra manera, el
+            código con posibles problemas de compatibilidad, hacerlo compatible
+            con cualquier plataforma.
+          </p>
+          <h2 class="mt-4">Variables</h2>
+          <p>
+            El primer gran cambio introducido en este standard es la posibilidad
+            de declarar variables acotadas al ámbito en que fueron declaradas
+            (let) para evitar que se sobre-escriba una variable que no debería.
+            Otra cosa a tener en cuenta, es que al usar let las variables ya no
+            se convierten de forma automática en propiedades del objeto global.
+            Además, se introdujo la posibilidad de declarar variables que no
+            pueden cambiar su contenido una vez asignadas (const). Por
+            convención, las constantes se declaran con mayúsculas
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3">
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/var.PNG" alt="var" width="100%" />
+                  <figcaption>
+                    En consola obtendríamos: <br />undefined <br />"Hola mundo"
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/let.PNG" alt="let" width="100%" />
+                  <figcaption>
+                    En consola obtendríamos: <br />undefined <br />undefined
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure>
+                  <img src="assets/const.PNG" alt="const" width="100%" />
+                  <figcaption>
+                    Al intentar modificar su contenido veríamos un error en
+                    consola
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-4">Tipos de Datos</h2>
+          <p>
+            Los Tipos de Datos son estructuras básicas de la programación que
+            nos permiten generar representaciones de la realidad y, de esa
+            forma, moldear los programas según necesitemos. Todos los Lenguajes
+            de Programación cuentan con su propio set de Tipos de Datos.
+            <br />
+            Los Tipos de Datos se dividen en 2 categorías: Primitivos y
+            Abstractos.
+          </p>
+          <ul>
+            <li>
+              Primitivos - Son Tipos de Datos proporcionados por el Lenguaje y
+              permiten construir Tipos de Datos Abstractos y estructuras de
+              datos:
+              <ul>
+                <li>Boolean - Valor lógico (true/false)</li>
+                <li>Number - Valor numérico (1, 1.5, -2, etc)</li>
+                <li>BigInt - Valores numéricos grandes (32434545n, 2324n)</li>
+                <li>
+                  String - Valor alfanumérico ("hola", "1", "a", "1 dato", etc)
+                </li>
+                <li>Undefined - Ausencia de Tipo de Dato y valor</li>
+                <li>Null - Tipo de Dato sin valor</li>
+              </ul>
+            </li>
+            <li>
+              Abstractos - Son Tipos de Datos creados por el desarrollador en
+              base a los Tipos de Datos Primitivos y otros Tipos de DAtos
+              Abstractos. Sirven para representar de forma más fiel la realidad
+              que el programa se propone emular o automatizar. En JS, los Tipos
+              de Datos Abstractos se crean a partir del Tipo de Dato Object, es
+              decir que todos los Tipos de Datos Abstractos son Objetos.
+              <ul>
+                <li>
+                  Objetos Planos(diccionarios) - Conjunto de datos organizados
+                  mediante el binomio clave: valor
+                </li>
+                <li>
+                  Arrays(listas) - Conjunto de datos organizados de forma
+                  secuencial mediante un valor de índice
+                </li>
+                <li>
+                  Funciones - Tipo de Dato que contiene código que se ejecuta
+                  según necesidad. Representan acciones
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <h2 class="mt-4">Funciones</h2>
+          <p>
+            Una función es un bloque de código, autocontenido, que se puede
+            definir una vez y ejecutar en cualquier momento. Opcionalmente,
+            puede aceptar parámetros y valores. <br />
+            En Javascript, las funciones son objetos. Un tipo especial de
+            objeto. <br />
+            Se dice que las funciones son ciudadanos de primera clase porque
+            pueden asignarse a un valor, pasarse como argumentos y usarse como
+            un valor de retorno. <br />
+            A partir de ECMAScript 6, es posible asignarle a las funciones
+            valores por defecto igualando el nombre otorgado al parámetro al
+            valor que deseamos se utilice en caso de no recibir un argumento en
+            el momento de la ejecución.
+          </p>
+          <div class="row row-cols-1 row-cols-lg-3">
+            <div class="col mb-3">
+              <img src="assets/funcionDeclarada.PNG" alt="" width="100%" />
+            </div>
+            <div class="col mb-3">
+              <img src="assets/funcionExpresada.PNG" alt="" width="100%" />
+            </div>
+            <div class="col">
+              <img src="assets/parametroDefecto.PNG" alt="" width="100%" />
+            </div>
+          </div>
+          <h2 class="mt-4">Contexto de ejecución (this)</h2>
+          <p>
+            En JavaScript es importante prestar atención a dónde se declara una
+            variable porque eso va a indicar si la misma es accesible. Esto se
+            debe a lo que conocemos como 'ámbito de variable'. Cuando trabajamos
+            con funciones tenemos que prestar atención, además, a lo que se
+            conoce como 'contexto de ejecución' (this). <br />
+            El contexto de ejecución (this) de una función nos va a indicar los
+            distintos elementos que podemos afectar con la misma. <br />
+            Todos los objetos en Javascript crean un contexto de ejecución
+            (this) propio y todo lo que hacemos en JavaScript se encuentra
+            almacenado en el objeto Window, por lo tanto el contexto de
+            ejecución (this) por defecto es el objeto Window. <br />
+            Las funciones declaradas(incluso las anónimas), trabajan sobre el
+            contexto de ejecución(this) en el que fueron creadas. Las arrow
+            function, en cambio, se saltan ese contexto y trabajan con el
+            contexto al que pertenece el elemento que las contiene.
+          </p>
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col mb-3">
+              <img src="assets/thisFD.PNG" alt="" width="100%" />
+            </div>
+            <div class="col">
+              <img src="assets/thisAF.PNG" alt="" width="100%" />
+            </div>
+          </div>
+          <h2 class="mt-4">Arrow function</h2>
+          <p>
+            Una de las razones por las que se introdujeron las funciones flecha
+            fue para eliminar complejidades del ámbito (this) y hacer que la
+            ejecución de funciones sea mucho más intuitiva.
+          </p>
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col mb-3">
+              <p>
+                En las funciones tradicionales de manera predeterminada this
+                está en el ámbito de window
+              </p>
+              <img src="assets/tradicional.PNG" alt="" width="100%" />
+            </div>
+            <div class="col">
+              <p>
+                Las funciones flecha no predeterminan this al ámbito o alcance
+                de window, más bien se ejecutan en el ámbito o alcance en que se
+                crean
+              </p>
+              <img src="assets/arrow.PNG" alt="" width="100%" />
+            </div>
+          </div>
+          <h2 class="mt-4">Template String</h2>
+          <p>
+            Los template string nos permiten escribir de forma más amigable un
+            string dentro de una variable que combine el contenido de una o
+            varias porciones de string con variables u elementos propios de JS
+          </p>
+          <div class="row row-cols-1 row-cols-lg-2">
+            <div class="col mb-3">
+              <figure>
+                <img src="assets/stringVariable.PNG" alt="" width="100%" />
+                <figcaption>ECMAScript 5</figcaption>
+              </figure>
+            </div>
+            <div class="col">
+              <figure>
+                <img src="assets/templateString.PNG" alt="" width="100%" />
+                <figcaption>Template String</figcaption>
+              </figure>
+            </div>
+          </div>
+          <h2 class="mt-4">Nuevas formas de iterar con For</h2>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3">
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/forEach.PNG" alt="" width="100%" />
+                  <figcaption>
+                    Es un método del objeto Array que nos permite obtener el
+                    dato y/o el índice que de los distintos elementos de un
+                    array
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/forOf.PNG" alt="" width="100%" />
+                  <figcaption>
+                    Bucle que nos devuelve el valor de los elementos que se
+                    encuentran en el array que deseamos recorrer
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure>
+                  <img src="assets/forIn.PNG" alt="" width="100%" />
+                  <figcaption>
+                    Itera sobre las propiedades de un objeto, creando un array
+                    que nos permite acceder a las mismas con la notación de
+                    corchetes
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-4">Métodos de Array</h2>
+          <h3 class="mt-4">Map</h3>
+          <p>
+            .map() es un método iterador similar a .forEach() con una diferencia
+            fundamental que nos va a indicar en qué momento utilizamos uno u
+            otro. <br />
+            Al trabajar con .forEach() tenemos la posibilidad de ejecutar una
+            función callback para cada elemento iterado, pero si quisiéramos
+            hacer un return dentro de dicha callback su valor siempre será null.
+            En otras palabras, con .forEach() no podemos retornar valores.
+            <br />
+            Para aquellos casos en que la iteración de los elementos almacenados
+            en un array requieran el retorno del valor de los mismos contamos
+            con .map(). <br />
+            El método map() crea un nuevo array con los resultados de la llamada
+            a la función indicada aplicados a cada uno de sus elementos.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/map.PNG" alt="" width="100%" />
+                  <figcaption></figcaption>
+                </figure>
+              </div>
+              <div class="col">
+                <figure>
+                  <img src="assets/map1.PNG" alt="" width="100%" />
+                  <figcaption></figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Filter</h3>
+          <p>
+            Recorre el array y retorna un nuevo array con aquellos elementos que
+            pasen una determinada condición.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/filter.PNG" alt="" width="100%" />
+                  <figcaption></figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Find</h3>
+          <p>
+            Recorre el array y retorna la primera coincidencia del elemento que
+            se busca.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/find.PNG" alt="" width="100%" />
+                  <figcaption></figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Includes</h3>
+          <p>
+            Determina si un array incluye un determinado elemento y retorna un
+            booleano según corresponda.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/includes.PNG" alt="" width="100%" />
+                  <figcaption></figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <footer class="text-end">
+            <a
+              href="https://desarrolloweb.com/manuales/manual-de-ecmascript-6.html"
+            >
+              <small> Información adicional sobre ECMAScript 2015</small></a
+            >
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Ejemplos -->
+    <script src="js/funcionCallback.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
