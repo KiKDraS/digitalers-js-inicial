@@ -1,0 +1,23 @@
+img {
+  max-width: 600px;
+}
+
+.propagacion div,
+.stopPropagation div,
+.delegacion div {
+  padding: 4rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.uno {
+  background-color: yellow;
+}
+
+.dos {
+  background-color: gold;
+}
+
+.tres {
+  background-color: lightyellow;
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>JavaScript Avanzado</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/eventos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper">
+        <span class="sidebar-heading border-bottom bg-light"
+          >Contacto:
+          <a href="mailto:anahiforesi.educacionit@gmail.com"
+            >Anahí Foresi</a
+          ></span
+        >
+        <ul class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="index.html"
+            >Eventos</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="ejercicios.html"
+            >Ejercicios</a
+          >
+        </ul>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          id="barra"
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <div class="container-fluid">
+            <button class="btn btn-primary" id="sidebarToggle">Temas</button>
+            <h1>Clase 02</h1>
+          </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+          <h2 class="mt-4">Programación Orientada a Eventos</h2>
+          <p>
+            La Programación orientada a eventos es un paradigma de programación
+            en el que la estructura y la ejecución de los programas van
+            determinados por los sucesos o acciones que ocurren en el sistema,
+            definidos por el usuario o por el propio sistema.
+            <br />
+            Como desarrolladores, nuestro objetivo es preparar el código para
+            que cuando ocurra un evento con ciertas características, se ejecute
+            un código asociado.
+          </p>
+          <h3 class="mt-4">Cómo trabajr con Eventos</h3>
+          <h4 class="mt-4">Mediante HTML</h4>
+          <p>
+            Consiste en agregar el evento a un elemento HTML mediante el uso de
+            atributos HTML. Esta opción no es particularmente recomendada
+            porque, entre otras cosas, implica mezclar lenguaje JavaScript con
+            HTML
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="assets/eventoHTML.PNG"
+                  alt="evento en HTML"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+          <h4 class="mt-4">Mediante propiedades</h4>
+          <p>
+            En esta opción, desde JavaScript, tomamos el elemento al que
+            queremos agregar el evento y lo asociamos utilizando el prefijo on
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="assets/eventoPropiedades.PNG"
+                  alt="evento con propiedades"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+          <h4 class="mt-4">API Web - EventTarget (Listeners)</h4>
+          <p>
+            EventTarget es una interfaz implementada por los objetos que pueden
+            administrar eventos y sus escuchadores. EventTarget nos permite
+            agregar escuchas (addEventListener) de un evento a un elemento y,
+            por lo tanto, generar la ejecución de varias funciones callback
+            sobre un sólo elemento. Con EventTarget también vamos a poder
+            eliminar una escucha (removeEventTarget) cuando esta ya no sea
+            necesaria.
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col col-lg-4">
+                <figure>
+                  <img
+                    src="assets/callbackAnonima.PNG"
+                    alt="funcion callback anonima"
+                    width="100%"
+                  />
+                  <figcaption>Listener con función callback anónima</figcaption>
+                </figure>
+              </div>
+              <div class="col col-lg-4">
+                <figure>
+                  <img
+                    src="assets/callback.PNG"
+                    alt="funcion callback"
+                    width="100%"
+                  />
+                  <figcaption>Listener con función callback</figcaption>
+                </figure>
+              </div>
+              <div class="col col-lg-4">
+                <button id="boton" class="btn btn-primary">
+                  Remover listener
+                </button>
+                <p>
+                  Remover un listener implica que la callback pasada en el
+                  removedor deje de ejecutarse, pero esto no impide la ejecución
+                  de otras callbacks
+                </p>
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Objeto Event</h3>
+          <p>
+            En algunos casos, nos puede interesar profundizar en detalles
+            relacionados con el evento. Por ejemplo, si estamos escuchando un
+            evento de click de ratón, nos puede interesar saber con que botón
+            del ratón se ha hecho click, o en que punto concreto de la pantalla.
+            Estos detalles son posibles obtenerlos a través del objeto event.
+            <br />
+            Para acceder al objeto event, sólo necesitamos agregar un parámetro
+            a la función callback del listener
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="assets/objetoEvent.PNG"
+                  alt="objeto event"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+          <h4 class="mt-4">Pasar Parámetros</h4>
+          <p>
+            A una callback de evento sólo se puede pasar el parámetro que hace
+            referencia al objeto evento por lo que, de necesitar parametros
+            debemos ejecutar una función dentro de la callback que reciba los
+            parámetros necesarios
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="assets/eventoParametro.PNG"
+                  alt="handler con parametro"
+                  width="100%"
+                />
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Propagación</h3>
+          <p>
+            Para entendender el principio de propagación primero debemos tener
+            en claro cómo se relacionan los distintos elementos (conocidos como
+            nodos) del DOM. El DOM nace en la creación del Objeto Document y, a
+            partir de ahí se genera el conocido como Árbol del DOM que es un
+            mapeo de las distintas relaciones de los nodos
+          </p>
+          <div class="container mb-4 mt-4">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col">
+                <img src="assets/DOMTree.png" alt="bubbling" width="100%" />
+              </div>
+            </div>
+          </div>
+          <p>Un Evento tiene 3 fases:</p>
+          <ol>
+            <li>
+              Event Capturing - Se busca al elemento que desato desde el primer
+              elemento del Árbol del DOM)
+            </li>
+            <li>Event Target - Se llega al elemento que desato el evento</li>
+            <li>
+              Event Bubbling - Se vuelve desde el elemento que desato el evento
+              hacia el primer elemento del Árbol del DOM
+            </li>
+          </ol>
+          <div class="container mb-4 mt-4">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col">
+                <img src="assets/propagacion.PNG" alt="bubbling" width="100%" />
+              </div>
+            </div>
+          </div>
+          <p>
+            El principio de propagación nos permite manejar cómo se va a
+            alcanzar al elemento que desató el evento. Casi todos los eventos se
+            propagan
+          </p>
+          <h3 class="mt-4">Propagación</h3>
+          <p>
+            Cuando un evento ocurre en un elemento, este primero ejecuta los
+            manejadores que tiene asignados, luego los manejadores de su padre,
+            y así hasta otros ancestros.
+          </p>
+          <h4 class="mt-4">Capturing</h4>
+          <section class="propagacion capture">
+            <div class="uno">
+              1
+              <div class="dos">
+                2
+                <div class="tres">3</div>
+              </div>
+            </div>
+          </section>
+          <h4 class="mt-4">Bubbling</h4>
+          <section class="propagacion bubble">
+            <div class="uno">
+              1
+              <div class="dos">
+                2
+                <div class="tres">3</div>
+              </div>
+            </div>
+          </section>
+          <h4 class="mt-4">Detener la propagación</h4>
+          <p>
+            Una propagación de evento empieza desde el elemento objetivo hacia
+            arriba. Normalmente este continúa hasta la etiqueta y luego hacia el
+            objeto document, algunos eventos incluso alcanzan window, llamando a
+            todos los manejadores en el camino. <br />
+            Pero cualquier manejador podría decidir que el evento se ha
+            procesado por completo y detener su propagación. <br />
+            El método para esto es event.stopPropagation().
+          </p>
+          <section class="stopPropagation">
+            <div class="uno">
+              1
+              <div class="dos">
+                2
+                <div class="tres">3</div>
+              </div>
+            </div>
+          </section>
+          <br />
+          <h3 class="mt-4">Delegación de eventos</h3>
+          <p>
+            La captura y el propagación nos permiten implementar uno de los más
+            poderosos patrones de manejo de eventos llamado
+            <i>delegación de eventos</i>. <br />
+            La idea es que si tenemos muchos elementos manejados de manera
+            similar podemos, en lugar de asignar un manejador a cada uno de
+            ellos, poner un único manejador a su ancestro común. <br />
+            Esta práctica, además de ayudarnos a mejorar la performance de
+            nuestra aplicación, se vuelve necesaria cuando trabajamos con
+            elementos creados de forma dinámica.
+          </p>
+          <section class="delegacion">
+            <div class="uno">
+              1
+              <div class="dos">
+                2
+                <div class="tres">3</div>
+              </div>
+            </div>
+          </section>
+          <br />
+          <footer class="text-end">
+            <a href="https://es.javascript.info/events">
+              <small> Información adicional sobre Eventos</small></a
+            >
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Eventos -->
+    <script src="js/eventos.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
