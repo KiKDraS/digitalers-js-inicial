@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>JavaScript Avanzado</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper">
+        <span class="sidebar-heading border-bottom bg-light"
+          >Contacto:
+          <a href="mailto:anahiforesi.educacionit@gmail.com"
+            >Anahí Foresi</a
+          ></span
+        >
+        <ul class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="index.html"
+            >RegExp</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="ejercicios.html"
+            >Ejercicios</a
+          >
+        </ul>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          id="barra"
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <div class="container-fluid">
+            <button class="btn btn-primary" id="sidebarToggle">Temas</button>
+            <h1>Clase 03</h1>
+          </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+          <h2 class="mt-4">Expresiones Regulares</h2>
+          <p>
+            Las expresiones regulares son patrones que proporcionan una potente
+            forma de buscar y reemplazar texto. En JavaScript cobran especial
+            relevancia porque, además, nos permiten generar validaciones.
+            <br />
+            Están disponibles a través del objeto <b>RegExp</b> y se encuentran
+            integrados en los métodos de <b>String</b>. <br />
+            Hay dos sintaxis que se pueden usar para crear un objeto de
+            expresión regular.
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img class="minWidth" src="assets/regExp01.PNG" width="100%" />
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Banderas</h3>
+          <p>
+            Las banderas son elementos que afectan a la búsqueda. <br />
+            En JavaScript sólo hay 6:
+          </p>
+          <ul>
+            <li>
+              <b>i</b> - La búsqueda no distingue entre mayúsculas y minúsculas:
+              no hay diferencia entre A y a
+            </li>
+            <li>
+              <b>g</b> - La búsqueda encuentra todas las coincidencias. Sin ella
+              sólo se devuelve la primera
+            </li>
+            <li>
+              <b>m</b> - Modo multilínea. Sólo afecta al comportamiento de
+              anclas (^,$). Coinciden no solo al principio y al final de la
+              cadena, sino también al inicio/final de la línea.
+            </li>
+            <li>
+              <b>s</b> - Habilita el modo “dotall”, que permite que un punto .
+              coincida con el carácter de línea nueva \n
+            </li>
+            <li>
+              <b>u</b> - Permite el soporte completo de Unicode. La bandera
+              permite el procesamiento correcto de pares sustitutos.
+            </li>
+            <li>
+              <b>y</b> - Modo “adhesivo”: búsqueda en la posición exacta del
+              texto
+            </li>
+          </ul>
+          <h3 class="mt-4">Clases de caracteres</h3>
+          <p>
+            Una clase de caracteres es una notación especial que coincide con
+            cualquier símbolo de un determinado conjunto. <br />
+            Para cada clase de caracteres existe una “clase inversa”, denotada
+            con la misma letra, pero en mayúscula. El “inverso” significa que
+            coincide con todos los demás caracteres
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img src="assets/regExp02.PNG" width="100%" class="minWidth" />
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Anclas: inicio ^ y final $ de la cadena</h3>
+          <p>
+            Las anclas ^ y $ son pruebas. Ellas tienen ancho cero. <br />
+            En otras palabras, no coinciden con un carácter, sino que obligan al
+            motor regexp a verificar la condición (inicio/fin de texto). <br />
+            El patrón ^Mary significa: “inicio de cadena y luego Mary”. <br />
+            Similar a esto, podemos probar si la cadena termina con nieve usando
+            nieve$ <br />
+            Ambos anclajes ^...$ se usan juntos a menudo para probar si una
+            cadena coincide completamente con el patrón.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-3">
+              <div class="col mb-3">
+                <img src="assets/regExp03.PNG" width="100%" />
+              </div>
+              <div class="col mb-3">
+                <img src="assets/regExp04.PNG" width="100%" />
+              </div>
+              <div class="col mb-3">
+                <img src="assets/regExp05.PNG" width="100%" />
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Límite de palabra: \b</h3>
+          <p>
+            Un límite de palabra \b es una prueba, al igual que ^ y $. <br />
+            Cuando el motor regex (módulo de programa que implementa la búsqueda
+            de expresiones regulares) se encuentra con \b, comprueba que la
+            posición en la cadena es un límite de palabra. <br />
+            La prueba de límite de palabra \b verifica que debe haber un \w en
+            un lado de la posición y "no \w"- en el otro lado. <br />
+            Pero \w significa una letra latina a-z (o un dígito o un guion
+            bajo), por lo que la prueba no funciona para otros caracteres,
+            p.ej.: letras cirílicas o jeroglíficos. <br />
+            Hay tres posiciones diferentes que califican como límites de
+            palabras:
+          </p>
+          <ul>
+            <li>
+              Al comienzo de la cadena, si el primer carácter de cadena es un
+              carácter de palabra \w.
+            </li>
+            <li>
+              Entre dos caracteres en la cadena, donde uno es un carácter de
+              palabra \w y el otro no.
+            </li>
+            <li>
+              Al final de la cadena, si el último carácter de la cadena es un
+              carácter de palabra \w.
+            </li>
+          </ul>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mb-3">
+                <figure>
+                  <img
+                    src="assets/regExp06.PNG"
+                    width="100%"
+                    class="minWidth"
+                  />
+                  <figcaption class="p-2">
+                    Los patrones \bHello\b y \bJava\b coinciden. Pero no \bHel\b
+                    (porque no hay límite de palabras después de l) y tampoco
+                    Java!\b (porque el signo de exclamación no es un carácter
+                    común \w, entonces no hay límite de palabras después de
+                    eso).
+                  </figcaption>
+                </figure>
+              </div>
+              <div class="col mb-3">
+                <figure>
+                  <img
+                    src="assets/regExp07.PNG"
+                    width="100%"
+                    class="minWidth"
+                  />
+                  <figcaption class="p-2">
+                    El patrón \b\d\d\b busca números independientes de 2
+                    dígitos. En otras palabras, busca números de 2 dígitos que
+                    están rodeados por caracteres diferentes de \w, como
+                    espacios o signos de puntuación (o texto de inicio/fin).
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Escapar caracteres especiales</h3>
+          <p>
+            Como hemos visto, una barra invertida \ se usa para denotar clases
+            de caracteres, p.ej. \d. Por lo tanto, es un carácter especial en
+            expresiones regulares (al igual que en las cadenas regulares).<br />
+            También hay otros caracteres especiales que tienen un significado
+            especial en una expresión regular, tales como [ ] { } ( ) \ ^ $ . |
+            ? * + <br />
+            Para usar un carácter especial como uno normal, hay que agregar una
+            barra invertida adelante. Por ej: '.' busca cualquier carácter
+            posible; mientras que '\.' busca un punto.
+          </p>
+          <h3 class="mt-4">Conjuntos y Rangos</h3>
+          <p>
+            Tanto los conjuntos como los rangos se representan mediante []. La
+            diferencia consiste en que los conjuntos (ej. [oi]), sólo retornaran
+            true si se encuentra o u i; mientras que en los rangos (ej. [0-5])
+            retornara true si se encuentra un dígito entre el 0 y el 5. <br />
+            Al igual que con las clases, es posible usar los rangos y conjuntos
+            para escapar caracteres. Por ej. [^aeyo] retornará true con
+            cualquier carácter <b>excepto</b> a, e, y u o. <br />
+            Al trabajar con conjuntos, también es posible utilizarlos para
+            encontrar dos palabras que comportan caracteres. Por ej.:
+            /Java(Script)?/ encontrará las palabras 'Java' y 'JavaScript'
+          </p>
+          <h3 class="mt-4">Cuantificadores +, *, ? y {n}</h3>
+          <p>
+            Al momento de realizar una búsqueda de caracteres podría
+            interesarnos limitar las coincidencias a una cantidad específica.
+            Para eso utilizamos los cuantificadores:
+          </p>
+          <ul>
+            <li>
+              {n} - Agregando un número entre llaves a nuestra búsqueda podemos
+              especificar la cantidad.
+              <ul>
+                <li>
+                  El recuento exacto: {x}<br />
+                  \d{5} Denota exactamente 5 dígitos, igual que \d\d\d\d\d.
+                </li>
+                <li>
+                  El rango: {x,y}, coincide x-y veces <br />
+                  Para encontrar números de 3 a 5 dígitos, podemos poner los
+                  límites en llaves: \d{3,5}
+                </li>
+                <li>
+                  Podemos omitir el límite superior <br />
+                  Luego, una regexp \d{3,} busca secuencias de dígitos de
+                  longitud 3 o más
+                </li>
+              </ul>
+            </li>
+            <li>
+              Abreviaciones
+              <ul>
+                <li>+ => 'uno o más' ({1,})</li>
+                <li>? => 'cero o uno' ({0,1})</li>
+                <li>* => 'cero o más' ({0,})</li>
+              </ul>
+            </li>
+          </ul>
+          <h3 class="mt-4">Grupos de Captura</h3>
+          <p>
+            Al incluir una parte del patrón entre paréntesis, estamos creando un
+            grupo de captura. <br />
+            Un grupo de captura permite 2 posibles acciones:
+          </p>
+          <ol>
+            <li>
+              Obtener una parte de la coincidencia como un elemento separado en
+              la matriz de resultados.
+            </li>
+            <li>
+              Al colocar un cuantificador después del paréntesis, se aplica a
+              los paréntesis en su conjunto
+            </li>
+          </ol>
+          <div class="container">
+            <div class="row">
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/regExp11.PNG" width="100%" />
+                  <figcaption class="p-2" class="m-auto">
+                    Sin paréntesis, el patrón go+ significa el carácter g,
+                    seguido por o repetido una o más veces. Por ejemplo, goooo o
+                    gooooooooo. <br />
+                    Los paréntesis agrupan los caracteres juntos, por lo tanto
+                    (go)+ significa go, gogo, gogogo etcétera.
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">Lookahead</h3>
+          <p>
+            Es utilizado para analizar el los valores ingresados en una RegExp y
+            retornar un true sólo si las condiciones planteadas en el Lookahead
+            se cumplen
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col mb-3">
+                <figure>
+                  <img src="assets/regExp12.PNG" width="100%" />
+                </figure>
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-4">Métodos de RegExp y String</h2>
+          <h3 class="mt-4">match()</h3>
+          <p>
+            El método str.match(regexp) encuentra coincidencias para las
+            expresiones regulares (regexp) en la cadena (str). <br />
+            Tiene 3 modos:
+          </p>
+          <ol>
+            <li>
+              Si la expresión regular (regexp) no tiene la bandera g, retorna un
+              array con los grupos capturados y las propiedades index (posición
+              de la coincidencia), input (cadena de entrada, igual a str) <br />
+              <div class="container">
+                <div class="row">
+                  <div class="col mb-3">
+                    <img src="assets/match01.PNG" alt="" width="100%" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              Si la expresión regular (regexp) tiene la bandera g, retorna un
+              array de todas las coincidencias como cadenas, sin capturar grupos
+              y otros detalles. <br />
+              <div class="container">
+                <div class="row">
+                  <div class="col mb-3">
+                    <img src="assets/match02.PNG" alt="" width="100%" />
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              Si no hay coincidencias, no importa si tiene la bandera g o no,
+              retorna null
+            </li>
+          </ol>
+          <h3 class="mt-4">split()</h3>
+          <p>
+            Divide la cadena usando la expresión regular (o una sub-cadena) como
+            delimitador.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mb-3">
+                <img src="assets/split01.PNG" width="100%" />
+              </div>
+              <div class="col mb-3">
+                <img src="assets/split02.PNG" alt="" width="100%" />
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">search()</h3>
+          <p>
+            El método str.search(regexp) retorna la posición de la primera
+            coincidencia o -1 si no encuentra nada. Solamente retorna la primer
+            coincidencia.
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col mb-3">
+                <img src="assets/search01.PNG" width="100%" />
+              </div>
+            </div>
+          </div>
+          <h3 class="mt-4">regexp.test()</h3>
+          <p>
+            El método regexp.test(str) busca por una coincidencia y retorna
+            true/false si existe.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mb-3">
+                <img src="assets/test01.PNG" width="100%" />
+              </div>
+              <div class="col mb-3">
+                <img src="assets/test02.PNG" width="100%" />
+              </div>
+            </div>
+          </div>
+          <p>
+            Si la expresión regular tiene la bandera g, el método regexp.test
+            busca la propiedad regexp.lastIndex y la actualiza.<br />
+            Entonces podemos usarlo para buscar desde un posición dada
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col mb-3">
+                <img src="assets/test03.PNG" width="100%" />
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-4">Validación de formularios</h2>
+          <p>
+            El trabajo con formularios, tan importante a la hora de comunicarnos
+            con el cliente, genera ciertas vulnerabilidades que, de no ser
+            atendidas, podrían permitir ataques maliciosos. <br />
+            Existen varias técnicas, principalmente desde el back-end, para
+            impedir la recepción de código malicioso pero desde JavaScript
+            podemos aportar para mejorar la seguridad. Para eso, vamos a hacer
+            uso de algunos métodos dados del lenguaje.
+          </p>
+          <ul>
+            <li>
+              trim() - Elimina los caracteres en blanco al principio y al final
+              del string
+            </li>
+            <li>
+              includes(x) - Nos permite pasar un carácter o cadena de caracteres
+              para revisar si el string determinado lo contiene. Devuelve un
+              booleano
+            </li>
+            <li>
+              indexOf(x) - Símil includes, pero devuelve la posición del
+              elemento buscado en el string o -1 en caso de que no exista
+            </li>
+          </ul>
+          <footer class="text-end">
+            <a href="https://es.javascript.info/regular-expressions">
+              <small> Información adicional sobre RegExp</small></a
+            >
+            |
+            <a href="https://regexr.com/">
+              <small> Generador de RegExp</small></a
+            >
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- RegExp -->
+    <script src="js/regExp.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+Ejercicios resueltos en archivo ejercicios.js
+
+/*
+    1 - Crear un formulario de contacto en HTML. Debe contener los input "nombre", "email" y un textarea "comentario". Validarlo utilizando RegExp.
+		Validar que:
+			=> Que el formulario no se envíe si los inputs están vacíos
+			=> Que el input "nombre" impida el envío del formulario si tiene escrito números
+			=> Que el input "email" impida el envío del formulario si se escribe un email inválido
+			=> Que el textarea no permita el ingreso de más de 250 caracteres
+    2 - Crear un formulario de registro en HTML y validarlo. El nombre de usuario no puede contener espacios y sólo debe aceptar letras y números, sin caracteres especiales; la contraseña debe contener al menos 1 caracter especial (@$?_\-¡!), 1 número, 1 mayúscula y entre 8 y 16 caracteres. 
+*/
