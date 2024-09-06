@@ -1,0 +1,8 @@
+#users {
+    width: clamp(250px, 50%, 600px);
+    padding: 16px;
+    margin: 16px 0;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
