@@ -1,0 +1,29 @@
+.main{
+    height: 460px;
+    margin: 20px auto;
+}
+
+form{
+    height: 175px;
+}
+
+.admin, .editor, .user{
+    padding: 10px;
+    height: 100%;
+}
+
+.admin{
+    background-color: #333;
+    color: rgb(214, 214, 214);
+}
+
+.editor{
+    background-color: black;
+    color: crimson;
+}
+
+.user{
+    background-color: cadetblue;
+    color: chartreuse;
+}
+

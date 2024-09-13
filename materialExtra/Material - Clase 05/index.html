@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>JavaScript Avanzado</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper">
+        <span class="sidebar-heading border-bottom bg-light"
+          >Contacto:
+          <a href="mailto:anahiforesi.educacionit@gmail.com"
+            >Anahí Foresi</a
+          ></span
+        >
+        <ul class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="index.html"
+            >SPA</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="ejercicios.html"
+            >Ejercicios</a
+          >
+        </ul>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          id="barra"
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <div class="container-fluid">
+            <button class="btn btn-primary" id="sidebarToggle">Temas</button>
+            <h1>Clase 05</h1>
+          </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+          <h2 class="mt-4">API REST</h2>
+          <p>
+            El término "Transferencia de Estado Representacional" (REST)
+            representa un conjunto de características de diseño de arquitecturas
+            software que aportan confiabilidad, eficiencia y escalibilidad a los
+            sistemas distribuidos. Un sistema es llamado RESTfull cuando se
+            ajusta a estas características. <br />
+            La idea básica de REST es que un recurso, e.j. un documento, es
+            transferido con su estado y su relaciones (hipertexto) mediante
+            formatos y operaciones estandarizadas bien definidas. <br />
+            Como HTTP, el protocolo estándar de la Web, también transfiere
+            documentos e hipertexto, las APIs HTTP a veces son llamadas APIs
+            RESTfull, servicios RESTful, o simplemente servicios REST, aunque no
+            se ajusten del todo a la definición de REST.
+          </p>
+          <h3 class="mt-4">Verbos REST</h3>
+          <ul>
+            <li>GET -> 'Obtener dato'</li>
+            <li>POST -> 'Enviar Dato'</li>
+            <li>PUT -> 'Modificar Dato'</li>
+            <li>DELETE -> 'Borrar Dato'</li>
+          </ul>
+          <h3 class="mt-4">CORS y Headers</h3>
+          <p>
+            El Intercambio de Recursos de Origen Cruzado (CORS) es un mecanismo que utiliza cabeceras HTTP adicionales para permitir que un user agent (en-US) obtenga permiso para acceder a recursos seleccionados desde un servidor, en un origen distinto (dominio) al que pertenece. Un agente crea una petición HTTP de origen cruzado cuando solicita un recurso desde un dominio distinto, un protocolo o un puerto diferente al del documento que lo generó.
+            <br/>  
+            Un ejemplo de solicitud de origen cruzado: el código JavaScript frontend de una aplicación web que es localizada en http://domain-a.com utiliza XMLHttpRequest para cargar el recurso http://api.domain-b.com/data.json.
+            <br/>
+            El trabajo con los Headers nos permite manipular la configuración para evitar este tipo de errores. Cabe destacar que saltarse el protocolo CORS no se considera una practica segura y, por tanto, debe evitarse.
+            <br/>
+            Los Headers son usualmente utilizados para configurar el tipo de dato que se va a estar enviando y recibiendo. 
+            <br/>
+            No todos los Headers son modificables.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1">
+                <div class="col mb-3">
+                    <img src="assets/headers1.png" alt="" width="70%" >
+                </div>
+                <div class="col mb-3">
+                    <img src="assets/headers2.png" alt="" width="70%" >
+                </div>
+                <div class="col mb-3">
+                    <img src="assets/headers3.png" alt="" width="70%" >
+                </div>
+            </div>
+          </div>  
+          <h2 class="mt-4">Single Page Application (SPA)</h2>
+          <p>
+            En una Single Page Application (SPA) todos los códigos (HTML, CSS,
+            JS) se cargan por única vez durante la carga inicial del sitio. La
+            vista es modificada dinámicamente de acuerdo a las distintas
+            interacciones realizadas por el usuario. <br />
+            Una SPA genera una distintiva mejora en la velocidad de navegación
+            pero su aplicación implica lidiar con algunos problemas de SEO,
+            implementar una navegación híbrida mediante el uso de las API's
+            History y Location, y el esfuerzo extra que conlleva mantener el
+            estado del sitio.
+          </p>
+          <h3 class="mt-4">
+            <a
+              href="https://www.paradigmadigital.com/dev/como-hacer-que-tu-single-page-applications-spa-sea-indexable-por-el-bot-de-google/"
+              target="_blank"
+              >Posibles Soluciones a Problemas de SEO</a
+            >
+          </h3>        
+          <h2 class="mt-4">API's History y Location</h2>
+          <p>
+            Las API's History y Location manejan el historial de navegación
+            (history) y la URL de navegación (location). <br />
+            Usadas en combinación, nos permiten realizar el 'ruteo' de las SPA
+          </p>
+          <h3 class="mt-4">Location</h3>
+          <ul>
+            <li>location.origin => ruta de origen(root - dominio)</li>
+            <li>location.href => url actual</li>
+            <li>location.hash => ancla (#) actual</li>
+            <li>location.search => datos pasados por parámetro</li>
+            <li>location.pathname => ruta del nombre del archivo</li>
+          </ul>
+          <h3 class="mt-4">History</h3>
+          <ul>
+            <li>history.length => array que contiene las páginas visitadas</li>
+            <li>history.forward(x) => x páginas hacia adelante</li>
+            <li>history.back(x) => x páginas hacia atrás</li>
+            <li>history.go(x) => -x hacia atras; x hacia adelante</li>
+            <li>
+              history.pushState(estado,titulo,url) => genera un nuevo historial
+              de navegación
+            </li>
+          </ul>
+          <div class="container">
+            <div class="row row-cols-1">
+              <div class="col mb-3">
+                <img
+                  src="assets/hash.png"
+                  alt=""
+                  width="100%"
+                  style="max-width: 800px"
+                />
+              </div>
+              <div class="col mb-3">
+                <img
+                  src="assets/pushState.png"
+                  alt=""
+                  width="100%"
+                  style="max-width: 800px"
+                />
+              </div>
+              <div class="col mb-3">
+                <img
+                  src="assets/ahorroDatos.png"
+                  alt=""
+                  width="100%"
+                  style="max-width: 800px"
+                />
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-4">Ejemplos</h2>
+          <ul>
+            <li>
+              <a href="ejemplos/hash.html" target="_blank">Ruteo con Hash</a>
+            </li>
+            <li>
+              <a href="ejemplos/pushState.html" target="_blank"
+                >Ruteo con pushState</a
+              >
+            </li>
+            <li>
+              <a href="ejemplos/apiRest.html" target="_blank">API REST</a>
+            </li>
+          </ul>
+          <footer class="text-end">
+            <a href="https://es.wikipedia.org/wiki/Single-page_application">
+              <small> Información adicional sobre SPA</small></a
+            >|
+            <a href="https://developer.mozilla.org/es/docs/Web/HTTP/CORS">
+              CORS</a
+            ></small
+          >
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>JavaScript Avanzado</title>
+    <link href="css/styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar-->
+      <div class="border-end bg-white" id="sidebar-wrapper">
+        <span class="sidebar-heading border-bottom bg-light"
+          >Contacto:
+          <a href="mailto:anahiforesi.educacionit@gmail.com"
+            >Anahí Foresi</a
+          ></span
+        >
+        <ul class="list-group list-group-flush">
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="index.html"
+            >Fetch</a
+          >
+          <a
+            class="list-group-item list-group-item-action list-group-item-light p-3"
+            href="ejercicios.html"
+            >Ejercicios</a
+          >
+        </ul>
+      </div>
+      <!-- Page content wrapper-->
+      <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav
+          id="barra"
+          class="navbar navbar-expand-lg navbar-light bg-light border-bottom"
+        >
+          <div class="container-fluid">
+            <button class="btn btn-primary" id="sidebarToggle">Temas</button>
+            <h1>Clase 07</h1>
+          </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+          <h2 class="mt-4">Método Reduce</h2>
+          <p>
+            Lo que hacemos con este método es insertar una función que se
+            aplicará a los elementos del array y nos devolverá un resultado.
+            Hasta ahí es muy parecido a otros métodos. La diferencia es que esta
+            función se ejecutará en cada elemento del array en orden progresivo,
+            tomando el resultado del anterior elemento.
+            <br />
+            Es decir, la función no solo se ejecutará para cada elemento, pero
+            también usará como referencia el resultado de la función ejecutada
+            en el anterior elemento para hacerlo. Por ello, el método reduce en
+            JavaScript nos devolverá un solo valor como resultado, pues es un
+            único valor que se ha ido transformando a lo largo de los elementos.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1 mb-2">
+              <img
+                src="assets/reduce.png"
+                alt=""
+                width="100%"
+                style="max-width: 700px"
+              />
+              <figure class="col">
+                La variable valorActual almacena el valor en que se encuentra
+                actualmente el recorrido del array, mientras que la variable
+                valorAnterior almacena el resultado de la ejecución de la misma
+                función en el valor anterior.
+                <br />
+                Por defecto, el primer valor almacenado en el array se toma como
+                el valorAnterior de la ejecución de la función en el segundo
+                valor del array. Es decir, la primera vez que se ejecuta la
+                función es en el segundo valor del array
+              </figure>
+            </div>
+            <div class="row row-cols-1 mb-2">
+              <img
+                src="assets/reduce1.png"
+                alt=""
+                width="100%"
+                style="max-width: 700px"
+              />
+              <figure class="col">
+                El Método reduce puede recibir un segundo parámetro para indicar
+                dónde queremos que empiece a ejecutarse pa función callback.
+                <br />
+                En este caso, generamos una constante que almacena el primer
+                valor guardado en el array para indicar que queremos que la
+                primer ejecución de la función sea en el primer valor almacenado
+                y no el segundo como pasaba antes
+              </figure>
+            </div>
+          </div>
+          <h2 class="mt-4">Pipelines</h2>
+          <p>
+            Un Pipeline es una sucesión de funciones, que se ejecutan una
+            después de otra. Lo más importante en un pipeline es que todas las
+            funciones que se encadenan tengan el mismo tipo de retorno y los
+            mismos valores de entrada.
+            <br />
+            La arquitectura basada en filtros (en pipeline) consiste en ir
+            transformando un flujo de datos en un proceso comprendido por varias
+            fases secuenciales, siendo la entrada de cada una la salida de la
+            anterior. En otras palabras, se busca obtener un resultado único de
+            la ejecución de varias funciones
+          </p>
+          <div class="row row-cols-1">
+            <div class="col">
+              <img
+                src="assets/pipeline.png"
+                alt=""
+                width="100%"
+                style="max-width: 700px"
+              />
+            </div>
+          </div>
+          <h2 class="mt-4">API Web Promise</h2>
+          <p>
+            La API Web Promise nace como una solución a la Pyramid of
+            Doom/Callback Hell con la que había que lidiar cuando necesitábamos
+            manejar múltiples respuestas asincrónicas y que cada nueva función
+            callback estuviera atada al resultado de la callback anterior.
+            <br />
+            Las promesas simplifican el código al introducir el concepto de una
+            "doble respuesta" que nos permite, mediante la concatenación de las
+            funciones then() y catch(), manejar la resolución positiva o
+            negativa de la ejecución de la promesa.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1">
+              <figure class="col">
+                <img
+                  src="assets/entenderPromesa.png"
+                  alt=""
+                  width="100%"
+                  style="max-width: 700px"
+                />
+                <p>Concepto de una Promise</p>
+              </figure>
+              <figure class="col">
+                <img
+                  src="assets/promesas2.png"
+                  alt=""
+                  width="100%"
+                  style="max-width: 700px"
+                />
+                <p>Uso de una Promise</p>
+              </figure>
+              <figure class="col">
+                <img
+                  src="assets/promesas.png"
+                  alt=""
+                  width="100%"
+                  style="max-width: 700px"
+                />
+                <caption>
+                  Uso de una Promise con catch/finally
+                </caption>
+              </figure>
+            </div>
+          </div>
+          <h2 class="mt-4">API Web Fetch</h2>
+          <p>
+            La API Web Fetch combina el Objeto XHR con la API Web Promise para
+            permitirnos manejar de forma mas limpia las llamadas AJAX.
+            <br />
+            La manipulación de la llamada AJAX mediante Fetch crea un objeto de
+            respuesta conocido como Response que es el que necesitamos acceder
+            para obtener toda la información correspondiente a la llamada.
+            <br />
+            Es importante notar que el Objeto Response es una Promise que nunca
+            es rechazada (siempre trabaja en resolve) cuando obtenemos una
+            respuesta a nuestra solicitud (el servidor devuelve un código de
+            respuesta) incluso si la respuesta recibida es un código de error.
+            Dentro del Objeto Response vamos a poder acceder a la clave "ok" que
+            almacena un Boolean para indicar que el código de respuesta es de
+            error o no.
+            <br />
+            La Promise generada por Fetch será rechazada ante un fallo de la red
+            o si algo impidió completar la solicitud
+          </p>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <img
+                  src="assets/fetch.png"
+                  alt=""
+                  width="100%"
+                  style="max-width: 700px"
+                />
+              </div>
+            </div>
+          </div>
+          <h2 class="mt-4">Función Generadora</h2>
+          <p>
+            Las funciones generadoras son funciones de las que podemos salir y
+            volver a entrar.
+            <br />
+            Cuando trabajamos con una función normal, su ejecución es total. Es
+            decir, todo lo que está escrito como cuerpo se realiza en cada una
+            de nuestras llamadas. Por el contrario, al trabajar con una función
+            generadora su ejecución siempre retorna un objeto iterador que
+            almacena 2 valores fundamentales: el método next() que nos permite
+            indicar que queremos continuar con la ejecución de la función y la
+            clave done que almacena un booleano para saber si tenemos más código
+            para ejecutar o no.
+          </p>
+          <div class="row row-cols-1">
+            <div class="col">
+              <img
+                src="assets/generadora.png"
+                alt=""
+                width="100%"
+                style="max-width: 700px"
+              />
+            </div>
+          </div>
+          <h2 class="mt-4">Funciones Asincrónicas (async/await)</h2>
+          <p>
+            Son una nueva característica soportada desde la actualización
+            ECMAScript2017, que nos permitirá realizar las mismas cosas que se
+            pueden lograr con Generadores y Promesas pero con menos esfuerzo. En
+            otras palabras, las Funciones Asincrónicas son una forma de trabajar
+            con Promesas. <br />
+            Cuando se llama a una función async, esta devuelve un elemento
+            Promise. Cuando la función async devuelve un valor, Promise se
+            resolverá con el valor devuelto. Si la función async genera una
+            excepción o algún valor, Promise se rechazará con el valor generado.
+            <br />
+            Una función async puede contener una expresión await, la cual pausa
+            la ejecución de la función asíncrona y espera la resolución de la
+            Promise pasada y, a continuación, reanuda la ejecución de la función
+            async y devuelve el valor resuelto.
+          </p>
+          <div class="container">
+            <div class="row row-cols-1">
+              <div class="col mb-3">
+                <img
+                  src="assets/async.PNG"
+                  alt=""
+                  width="100%"
+                  style="max-width: 700px"
+                />
+              </div>
+            </div>
+            <figure class="col">
+              <img
+                src="assets/pipelineAsync.png"
+                alt=""
+                width="100%"
+                style="max-width: 700px"
+              />
+              <p>Combinación de Pipelines con Promesas y Async</p>
+            </figure>
+          </div>
+
+          <h2 class="mt-4">Ejemplos</h2>
+          <h3 class="mt-4">XHR</h3>
+          <ul class="ajax"></ul>
+          <h3 class="mt-4">Fetch</h3>
+          <ul class="fetch"></ul>
+          <h3 class="mt-4">Async</h3>
+          <ul class="async"></ul>
+
+          <footer class="text-end">
+            <small
+              >Información Adicional
+              <a href="https://es.javascript.info/fetch">Fetch</a> |
+              <a href="https://es.javascript.info/async">Promise</a> |
+              <a href="https://es.javascript.info/generators">Generadores</a> |
+              <a
+                href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Statements/async_function"
+                >Async</a
+              ></small
+            >
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Fetch -->
+    <script src="js/index.js"></script>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

@@ -4,7 +4,7 @@
     -> https://www.jsv9000.app/
 */
 
-//Manejo de asincronía mediate callbacks - Las funciones callbacks pasan al Task Queue y esperan a que se termine de ejecutar el resto del programa antes de ejecutarse
+//Manejo de asincronía mediante callbacks - Las funciones callbacks pasan al Task Queue y esperan a que se termine de ejecutar el resto del programa antes de ejecutarse
 function program() {
   console.log("Inicio");
 
@@ -71,3 +71,27 @@ function cbHell() {
   doA(callbackA);
   doF();
 }
+
+const asincronia = () => {
+  function cuadrado(num) {
+    const cbResultado = () => {
+      return num * num;
+    };
+
+    return setTimeout(cbResultado, 0);
+  }
+
+  let resultado = cuadrado(2);
+  //Guarda el retorno de la función cuadrado(2)
+  console.log(resultado);
+  //Para que la variable resultado tenga un número
+  //tiene que ejecutarse la función cbResultado
+  resultado = cuadrado(resultado);
+  console.log(resultado);
+
+  /*
+    Toda función callback que encuentra en el TaskQueue
+    debe esperar a que termine de ejecutarse todo el 
+    código sincrónico
+  */
+};

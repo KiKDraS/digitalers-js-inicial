@@ -1,0 +1,3 @@
+Ejercicio resuelto en el archivo ejercicio.js
+
+/* Hacer una página SPA con login */

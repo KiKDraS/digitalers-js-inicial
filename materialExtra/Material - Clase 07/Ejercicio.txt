@@ -1,0 +1,3 @@
+Ejercicio resuelto en archivo ejercicios.js (alternativa async en ejerciciosAsync.js)
+
+//Utilizando la API REST //https://pokeapi.co/ crear una pantalla que muestre a cada pókemon con su nombre, imagen y ataques (3).
