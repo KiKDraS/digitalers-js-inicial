@@ -1,0 +1,10 @@
+.sign-in {
+    border: 1px solid black;
+    border-radius: 16px;
+    padding: 16px;
+    margin: 16px auto;
+    width: clamp(200px, 50vw, 600px);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

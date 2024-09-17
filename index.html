@@ -6,12 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digitalers</title>
     <link rel="stylesheet" href="css/index.css">
+    <!-- 
+        Módulo => Archivo de JS que tiene una o varias funciones
+            -> Se pueden cargar de forma asincrónica. No bloquean la carga de los otros elementos
+                -> defer - El módulo se ejecuta después de que se haya leído el documento (DOMContentLoaded). Usar si tenemos que interactuar con elementos del DOM
+                -> async - El módulo se ejecuta después de ser leído. Usar si no se tiene que interactuar con elementos del DOM
+            -> Trabajar con módulos permite simplificar la lectura del programa   
+            
+        import/export
+        
+        El archivo index.js => Archivo raíz (todo el programa se ejecuta dentro de este archivo)
+            -> El archivo raíz IMPORTA las funciones EXPORTADAS por el resto de los archivos
+
+        export
+            -> export default
+                -> No obliga a utilizar el mismo nombre en el import
+                -> No puede haber más de un export default por archivo
+                -> Se utiliza en los archivos que no contendrán más de una función
+                -> Nombre del archivo === nombre de la función
+            -> export    
+                -> Obliga a utilizar el mismo nombre en el import
+                -> Puede haber más de un export por archivo
+                -> Crea un objeto que contiene todas las funciones que se están exportando
+    -->
+    <script defer type="module" src="js/index.js"></script>
 </head>
 
 <body>
-    <h1>Javascript Inicial</h1>
-    <p>Para evitar que se solapen los conceptos, las ramas pertenecientes a cada clase NO serán mergeadas en main.</p>
-    <script src="js/index.js"></script>
+    <div id="root"></div>
 </body>
 
 </html>
